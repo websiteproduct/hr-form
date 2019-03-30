@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Форма для HR-специалиста</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+	<div class="container">
+		<form action="">
+			<section class="common">
+				<div class="mb-3">
+					<h1>
+						Вакансия: <span class="secondary-color">Junior Frontend Developer</span>
+					</h1>
+				</div>
+				<div class="info mb-3">
+					<div class="d-inline-block">
+						<img src="/photo.jpg" alt="" class="border-w-10 mr-5">
+					</div>
+					<div class="d-inline-block">
+						<div class="info-block">
+							<div class="label">ФИО:</div>
+							<div class="info-block-value">Конышев Кирилл Владимирович</div>
+						</div>
+						<div class="info-block">
+							<div class="label">Git-репозиторий:</div>
+							<div class="info-block-value">
+								<a href="https://github.com/websiteproduct/hr-form" target="_blank">https://github.com/websiteproduct/hr-form</a>
+							</div>
+						</div>
+						<div class="info-block">
+							<div class="label">Опыт работы:</div>
+							<div class="info-block-value">13 лет</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="common">
+				<div class="mb-5">
+					<span class="block-title d-inline-block mr-3">Дата собеседования:</span>
+					<input type="date" class="form-input mr-1">
+					<i class="far fa-calendar-alt fa-2x"></i>
+				</div>
+				<div class="mb-5">
+					<p class="block-title">Уровень английского:</p>
+					<label><input type="radio" name="english-level"> Плохо</label>
+					<label><input type="radio" name="english-level"> Средне</label>
+					<label><input type="radio" name="english-level"> Хорошо</label>
+					<label><input type="radio" name="english-level"> Превосходно</label>
+				</div>
+				<div class="mb-5">
+					<p class="block-title">Ключевые навыки:</p>
+					<ul id="skill-list" class="list mb-3">
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>JavaScript</li>
+						<li>JQuery</li>
+						<li>Bootstrap</li>
+						<li>Wordpress</li>
+					</ul>
+					<input id="skill" type="text" class="form-input mr-3" name="skill" placeholder="Введите навык"> <button class="btn" onclick="addSkill();">Добавить в список</button>
+					<div id="validator" class="validator-block">
+						<span class="text-danger">Поле "навык" не может быть пустым</span>
+					</div>
+				</div>
+				<div class="mb-5">
+					<span class="block-title mr-3">Коммуникабельность:</span>
+					<select class="form-input" name="communication">
+						<option selected>Выбрать...</option>
+						<option>Ненавижу людей</option>
+						<option>Социопат</option>
+						<option>Предпочитаю молчать</option>
+						<option>Немного общаюсь</option>
+						<option>Продам ручку любому</option>
+					</select>
+				</div>
+				<div class="mb-5">
+					<span class="block-title mr-3">Желаемая з/п:</span>
+					<input type="text" name="user-salary" class="form-input">
+				</div>
+				<div class="mb-5">
+					<p class="block-title">Подходит по критериям:</p>
+					<label><input type="checkbox" name="english-knowledge"> Знание английского</label>
+					<label><input type="checkbox" name="salary"> Оклад</label>
+					<label><input type="checkbox" name="skills"> Навыки</label>
+					<label><input type="checkbox" name="new-employee"> Сразу видно, что свой человек</label>
+				</div>
+				<div class="mb-5">
+					<p class="block-title">Образование и курсы:</p>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Сроки обучения</th>
+								<th>Наименование учебного заведения, курсов</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>3 месяца</td>
+								<td>Level-UP: Web разработчик / Junior Frontend Developer</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>6 месяцев</td>
+								<td>PHP-разработчик с 0 до PRO</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>12 месяцев</td>
+								<td>Нетология. Frontend-разработчик с нуля</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>2 дня</td>
+								<td>СПб ГБ ПОУ Невский колледж имени А.Г. Неболсина, Оператор ЭВМ 2-го разряда</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<div class="mb-3">
+				<button type="submit" class="btn" disabled>Отправить форму</button>
+			</div>
+		</form>
+	</div>
+	<script>
+		var skillList = document.getElementById('skill-list');
+
+		function addSkill() {
+			var newSkill = document.createElement('li');
+			var skill = document.getElementById('skill');
+			var validator = document.getElementById('validator');
+
+			if (skill.value == '') {
+				validator.style.display = "block";
+				return;
+			}
+
+			newSkill.innerText = skill.value;
+			skillList.appendChild(newSkill);
+			validator.style.display = "none";
+			skill.value = '';
+		}
+	</script>
+</body>
+</html>
