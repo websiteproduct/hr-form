@@ -65,8 +65,51 @@ input[type="checkbox"] {
 	margin: 0 4px 0 0;
 }
 
-label {
+.custom-input:not(:last-child) {
 	margin-right: 32px;
+}
+
+.custom-input label {
+	cursor: pointer;
+	padding-left: 30px;
+	position: relative;
+}
+
+.custom-input input {
+	position: absolute;
+	opacity: 0;
+}
+
+.custom-input input[type="checkbox"] + label:before {
+	content: '\f0c8';
+}
+
+.custom-input input[type="checkbox"]:checked + label:before {
+	content: '\f14a';
+}
+
+.custom-input input[type="radio"] + label:before {
+	content: '\f111';
+}
+
+.custom-input input[type="radio"]:checked + label:before {
+	content: '\f192';
+}
+
+.custom-input input + label:before {
+	content: '\f0c8';
+	font-family: "Font Awesome 5 Free";
+	color: #007bff;
+	position: absolute;
+	left: 0;
+	display: inline-block;
+}
+
+.custom-input input:checked + label:before {
+	content: '\f14a';
+	color: #007bff;
+	font-family: "Font Awesome 5 Free";
+	display: inline-block;
 }
 
 img {
