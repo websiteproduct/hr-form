@@ -15,12 +15,19 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	color: #2b2b2b;
+	background: linear-gradient(to bottom, #13293D 0%, #13293D 1%, #006494 1%, #247BA0 2%, #f1f1f1 2%, #fff 98%, #247BA0 98%, #247BA0 99%, #13293D 99%, #13293D 100%);
+	padding: 18px 0 36px 0;
 }
 
 input,
 textarea,
 .btn {
 	font-family: "Roboto", sans-serif;
+}
+
+select,
+input {
+	outline: 0;
 }
 
 section {
@@ -232,4 +239,8 @@ h1:after {
 .table th {
 	padding: 5px 10px;
 	border: 1px solid #e1e1e1;
+}
+
+.table tbody tr:hover {
+	background-color: #f1f1f1;
 }
