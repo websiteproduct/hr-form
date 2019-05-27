@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "fName": "Josh",
+        "lName": "Hartnett",
+        "job": "actor",
+        "sliderImg": "/assets/images/profiles/1/slider-image.jpg",
+        "shortDescr": "An American actor and movie producer.",
+        "awards": ["Gold Derby Award 2006", "Teen Choice Award 2002"],
+        "descr": "<p>Joshua Daniel Hartnett (born July 21, 1978) is an American actor and movie producer. He first came to attention in 1997 for his role as Michael Fitzgerald in the television crime drama series Cracker. He made his feature film debut in 1998 in the slasher film Halloween H20: 20 Years Later, followed by teen roles in films such as the sci-fi horror film The Faculty (1998) and the drama The Virgin Suicides (1999). Hartnett had starring roles in the war film Pearl Harbor, the drama O, the war film Black Hawk Down, the romantic comedy 40 Days and 40 Nights, the crime thriller Lucky Number Slevin (2006), and other films.</p><p>He starred in the Brian De Palma–directed neo-noir crime thriller The Black Dahlia (2006). He next appeared in the drama Resurrecting the Champ (2007) alongside Samuel L. Jackson, the graphic novel–based vampire horror film 30 Days of Night (2007) and the neo-noir atmospheric thriller I Come with the Rain (2009). From 2014 to 2016, he starred as Ethan Chandler in the horror TV series Penny Dreadful, for which he was nominated for a Fangoria Chainsaw Award.</p>",
+        "profileImg": ["/assets/images/profiles/1/profile1.jpg"],
+        "pressImg": "/assets/images/profiles/1/profile2.jpg",
+        "press": [
+            {"id": 1, "title": "Press title 1", "image": "/assets/images/profiles/1/press1.jpg", "date": "25th May, 2019"},
+            {"id": 2, "title": "Another press title", "image": "/assets/images/profiles/1/press2.jpg", "date": "26th May, 2019"}
+        ]
+    },
+    {
+        "id": 2,
+        "fName": "Kathrin",
+        "lName": "Beckinsale",
+        "job": "actress",
+        "sliderImg": "/assets/images/profiles/2/slider-image.jpg",
+        "shortDescr": "Famous English actress.",
+        "awards": ["Costume Designers Guild Awards 2012"],
+        "descr": "<p>Kathrin Romary Beckinsale (born 26 July 1973) is an English actress. After some minor television roles, she made her film debut in Much Ado About Nothing (1993) while still a student at the University of Oxford. She appeared in British costume dramas such as Prince of Jutland (1994), Cold Comfort Farm (1995), Emma (1996), and The Golden Bowl (2000), in addition to various stage and radio productions. She began to seek film work in the United States in the late 1990s and, after appearing in small-scale dramas The Last Days of Disco (1998) and Brokedown Palace (1999), she had starring roles in the war drama Pearl Harbor (2001), the romantic comedy Serendipity and Tiptoes (2003). She followed those with appearances in The Aviator (2004) and Click (2006).</p><p>Since being cast as Selene in the Underworld film series (2003–2016), Beckinsale has become known primarily for her work in action films, including Van Helsing (2004), Whiteout (2009), Contraband (2012), and Total Recall (2012). She also continues to make appearances in smaller dramatic projects such as Snow Angels (2007), Nothing but the Truth (2008), and Everybody\"s Fine (2009). In 2016, she received critical acclaim for her performance in the period comedy film Love & Friendship.</p>",
+        "profileImg": ["/assets/images/profiles/2/profile1.jpg"],
+        "pressImg": "/assets/images/profiles/2/profile2.jpg",
+        "press": [
+            {"id": 1, "title": "Kate Beckinsale calls David Walliams her DAD", "image": "/assets/images/profiles/2/press1.jpg", "date": "9th May, 2019"},
+            {"id": 2, "title": "Why did Kate Beckinsale and Pete Davidson split up", "image": "/assets/images/profiles/2/press2.jpg", "date": "30th April, 2019"}
+        ]
+    }
+]
